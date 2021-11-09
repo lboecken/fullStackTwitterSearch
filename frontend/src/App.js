@@ -5,18 +5,9 @@ import { Search, Home, Random, Local } from './pages/pages';
 import { Navbar, Footer } from './components/components';
 
 function App() {
-  const fetchAPI = async () => {
-    const query = await fetch('http://localhost:5000/api/search?query=%40nasa');
-    return query.json();
-  };
-
   return (
     <div className='App'>
       <Navbar />
-      <button
-        onClick={() => {
-          console.log(fetchAPI());
-        }}></button>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/search' element={<Search />} />
