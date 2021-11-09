@@ -1,0 +1,19 @@
+.searchTwitter * {
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+/* INPUT  */
+.inputForm {
+  display: flex;
+  width: 80vw;
+}
+
+.inputForm input {
+  width: 100%;
+}
+
+/* RESULTS */

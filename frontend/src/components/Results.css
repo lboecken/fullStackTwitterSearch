@@ -1,5 +1,6 @@
 .results {
   height: 400px;
-  width: 200px;
+  width: 40vw;
   border: black solid 1px;
+  background: #14171a;
 }

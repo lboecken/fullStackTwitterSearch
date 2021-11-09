@@ -1,0 +1,22 @@
+.tweet {
+  display: flex;
+  width: 80%;
+  border: white 1px solid;
+  flex-direction: column;
+  background: #aab8c2;
+}
+.tweet * {
+  background: #aab8c2;
+}
+.userInfo {
+  display: flex;
+}
+
+.tweetInfo {
+  display: flex;
+  gap: 10px;
+}
+
+.tweetMetrics {
+  display: flex;
+}

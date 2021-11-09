@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Search.css';
 const axios = require('axios').default;
 
 function Input() {
@@ -9,11 +9,12 @@ function Input() {
     const query = await axios.get('http://localhost:5000/api/search', {
       params: { query: searchParams },
     });
+    console.log(query);
     return query;
   };
 
   return (
-    <form onSubmit={fetchAPI}>
+    <form onSubmit={fetchAPI} className='inputForm'>
       <input
         onChange={(e) => {
           setSearchParams(e.target.value);

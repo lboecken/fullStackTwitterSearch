@@ -7,13 +7,15 @@ import { Navbar, Footer } from './components/components';
 function App() {
   return (
     <div className='App'>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/search' element={<Search />} />
-        <Route path='/random' element={<Random />} />
-        <Route path='/local' element={<Local />} />
-      </Routes>
+      <div className='contentWrapper'>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/search' element={<Search />} />
+          <Route path='/random' element={<Random />} />
+          <Route path='/local' element={<Local />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

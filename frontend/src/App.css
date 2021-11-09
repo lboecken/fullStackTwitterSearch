@@ -1,0 +1,10 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+  background: #1da1f2;
+  width: 100vw;
+}
+
+.contentWrapper {
+  padding-bottom: 5rem;
+}
