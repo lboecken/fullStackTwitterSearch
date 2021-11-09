@@ -6,7 +6,7 @@ import os
 dotenv_path = Path('/Users/lennart/Desktop/Programming/MasterMind/fullstack_twitter/.env')
 load_dotenv(dotenv_path=dotenv_path)
 bearer_token = os.getenv("BEARER_TOKEN")
-print(bearer_token)
+
 
 
 def bearer_oauth(response):

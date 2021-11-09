@@ -13,7 +13,7 @@ function Home() {
         odio, suscipit sodales porttitor quis, varius vitae massa. Sed rutrum at
         orci ut maximus. Nunc vel tempus urna.
       </p>
-      <img src='https://via.placeholder.com/300' />
+      <img src='https://via.placeholder.com/300' alt='Placeholder' />
     </div>
   );
 }

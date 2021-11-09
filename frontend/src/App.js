@@ -6,7 +6,7 @@ import { Navbar, Footer } from './components/components';
 
 function App() {
   const fetchAPI = async () => {
-    const query = await fetch('http://localhost:5000/api');
+    const query = await fetch('http://localhost:5000/api/search?query=%40nasa');
     return query.json();
   };
 
