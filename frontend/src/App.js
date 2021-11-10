@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Search, Home, Random, Local } from './pages/pages';
+import { Search, Home, Stream, Local } from './pages/pages';
 import { Navbar, Footer } from './components/components';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/search' element={<Search />} />
-          <Route path='/random' element={<Random />} />
+          <Route path='/stream' element={<Stream />} />
           <Route path='/local' element={<Local />} />
         </Routes>
       </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Random() {
+function Stream() {
   return (
     <div>
-      <h1>Random Tweets</h1>
+      <h1>Stream Tweets</h1>
     </div>
   );
 }
 
-export default Random;
+export default Stream;

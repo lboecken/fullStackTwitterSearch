@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import './Search.css';
 const axios = require('axios').default;
 
-function Input() {
+function Input(props) {
   const [searchParams, setSearchParams] = useState();
   const fetchAPI = async (e) => {
     e.preventDefault();
     const query = await axios.get('http://localhost:5000/api/search', {
       params: { query: searchParams },
     });
-    console.log(query);
+    props.setQueryResults(query);
+    console.log(typeof query);
+    console.log(query.data);
+    console.table(query.data);
     return query;
   };
 

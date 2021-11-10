@@ -89,8 +89,8 @@ function Search() {
   return (
     <div className='searchTwitter'>
       <h1 className='title'>Search Page</h1>
-      <Input />
-      <Results tweets={queryResults} />
+      <Input setQueryResults={setQueryResults} />
+      <Results tweets={queryResults.data} />
     </div>
   );
 }

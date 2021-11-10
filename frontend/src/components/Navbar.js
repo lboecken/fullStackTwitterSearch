@@ -8,7 +8,7 @@ function Navbar() {
       <nav>
         <Link to='/'>Home</Link>
         <Link to='/search'>Search</Link>
-        <Link to='/random'>Random</Link>
+        <Link to='/stream'>Stream</Link>
         <Link to='/local'>Local</Link>
       </nav>
     </div>
