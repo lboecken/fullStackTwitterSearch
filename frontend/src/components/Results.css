@@ -1,6 +1,7 @@
 .results {
-  height: 400px;
+  max-height: 800px;
   width: 40vw;
   border: black solid 1px;
   background: #14171a;
+  overflow: auto;
 }
