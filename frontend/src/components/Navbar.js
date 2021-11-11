@@ -9,7 +9,7 @@ function Navbar() {
         <Link to='/'>Home</Link>
         <Link to='/search'>Search</Link>
         <Link to='/stream'>Stream</Link>
-        <Link to='/local'>Local</Link>
+        <Link to='/random'>Random</Link>
       </nav>
     </div>
   );

@@ -10,10 +10,6 @@ function Input(props) {
       params: { query: searchParams },
     });
     props.setQueryResults(query);
-    console.log(typeof query);
-    console.log(query.data);
-    console.table(query.data);
-    return query;
   };
 
   return (

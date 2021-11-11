@@ -1,5 +1,3 @@
-import pprint
-
 def reorganize_response(response):
     response = reorganize_media(response)
     response = reorganize_users(response)

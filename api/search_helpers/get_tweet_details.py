@@ -3,7 +3,6 @@ import pprint
 
 def get_tweets_ids(tweets):
     tweets_ids = ''
-    # pprint.pprint(tweets)
     for tweet in tweets:
         tweets_ids += tweet["id"] + ','
     return tweets_ids.rstrip(',')

@@ -3,7 +3,6 @@ import './Results.css';
 import Tweet from './Tweet';
 
 function Results(props) {
-  console.log(props);
   return (
     <div className='results'>
       {props.tweets &&
