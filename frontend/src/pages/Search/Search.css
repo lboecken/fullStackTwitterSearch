@@ -1,19 +1,30 @@
 .searchTwitter * {
   margin: auto;
-}
-
-.title {
-  text-align: center;
+  box-sizing: border-box;
 }
 
 /* INPUT  */
 .inputForm {
   display: flex;
   width: 80vw;
+  justify-content: center;
 }
 
-.inputForm input {
-  width: 100%;
+.inputForm__input {
+  width: 24rem;
+  background: #181a1d;
+  border: #181a1d 1.5rem solid;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  margin: 2rem auto 1.5rem auto;
+  color: white;
 }
 
-/* RESULTS */
+.inputForm__input:focus-visible {
+  outline: none;
+}
+
+.inputForm__input:hover {
+  background: #1c1e21;
+  border: #1c1e21 1.5rem solid;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Search, Home, Stream, Random } from './pages/pages';
-import { Navbar, Footer } from './components/components';
+import { Navbar } from './components/components';
 
 function App() {
   return (
@@ -16,7 +16,6 @@ function App() {
           <Route path='/random' element={<Random />} />
         </Routes>
       </div>
-      <Footer />
     </div>
   );
 }

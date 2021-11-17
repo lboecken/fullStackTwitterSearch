@@ -1,15 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  function toggleNavBar() {
+    if (isNavOpen === false) {
+      setIsNavOpen(true);
+    } else {
+      setIsNavOpen(false);
+    }
+  }
   return (
     <div>
-      <nav>
-        <Link to='/'>Home</Link>
-        <Link to='/search'>Search</Link>
-        <Link to='/stream'>Stream</Link>
-        <Link to='/random'>Random</Link>
+      <div className='header__wrapper'>
+        <FontAwesomeIcon
+          className='header__menuButton'
+          icon={faBars}
+          onClick={toggleNavBar}
+        />
+        <h1 className='header__title'> Search Twitter</h1>
+        <div className='header__filler'></div>
+      </div>
+      <nav
+        className={`header__navBar ${isNavOpen ? 'header__navBar--open' : ''}`}>
+        <Link to='/' className='header__navBar__link' onClick={toggleNavBar}>
+          Home
+        </Link>
+        <Link
+          to='/search'
+          className='header__navBar__link'
+          onClick={toggleNavBar}>
+          Search
+        </Link>
+        <Link
+          to='/random'
+          className='header__navBar__link'
+          onClick={toggleNavBar}>
+          Random
+        </Link>
       </nav>
     </div>
   );

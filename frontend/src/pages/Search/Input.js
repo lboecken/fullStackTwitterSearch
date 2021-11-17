@@ -15,13 +15,13 @@ function Input(props) {
   return (
     <form onSubmit={fetchAPI} className='inputForm'>
       <input
+        className='inputForm__input'
         onChange={(e) => {
           setSearchParams(e.target.value);
         }}
         type='text'
-        placeholder='Search for your favorite tweets, @users, or #hashtags here...'
+        placeholder='Search Twitter'
       />
-      <button type='submit'>Search</button>
     </form>
   );
 }

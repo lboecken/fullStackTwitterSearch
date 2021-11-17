@@ -1,7 +1,5 @@
 .results {
-  max-height: 800px;
-  width: 40vw;
-  border: black solid 1px;
-  background: #14171a;
+  width: 95%;
+  margin: auto;
   overflow: auto;
 }
