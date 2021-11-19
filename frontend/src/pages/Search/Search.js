@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Input from './Input';
+import Dropdown from './RulesDropdown';
 import { Results } from '../../components/components';
 import './Search.css';
 
@@ -8,6 +9,7 @@ function Search() {
 
   return (
     <div className='searchTwitter'>
+      <Dropdown />
       <Input setQueryResults={setQueryResults} />
       <Results tweets={queryResults} />
     </div>

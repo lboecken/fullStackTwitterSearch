@@ -3,6 +3,34 @@
   box-sizing: border-box;
 }
 
+/* DROPDOWN */
+.rules * {
+  color: white;
+}
+.rules {
+  margin: 1rem 1rem 0rem 1rem;
+}
+
+.rules__description {
+  text-align: start;
+  margin: 2ch;
+}
+
+.rules__table thead tr th,
+.rules__table tbody tr td {
+  border-right: white 1px solid;
+  border-bottom: white 1px solid;
+  padding: 1ch;
+}
+.rules__table tbody tr td:first-child,
+.rules__table thead tr th:first-child {
+  border-left: white 1px solid;
+}
+
+.rules__table thead tr th {
+  border-top: white 1px solid;
+}
+
 /* INPUT  */
 .inputForm {
   display: flex;

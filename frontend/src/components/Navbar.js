@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTwitter } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -22,7 +22,6 @@ function Navbar() {
           onClick={toggleNavBar}
         />
         <h1 className='header__title'> Search Twitter</h1>
-        <div className='header__filler'></div>
       </div>
       <nav
         className={`header__navBar ${isNavOpen ? 'header__navBar--open' : ''}`}>

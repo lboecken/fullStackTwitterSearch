@@ -17,7 +17,7 @@ function Input(props) {
       <input
         className='inputForm__input'
         onChange={(e) => {
-          setSearchParams(e.target.value);
+          setSearchParams(encodeURIComponent(e.target.value));
         }}
         type='text'
         placeholder='Search Twitter'
