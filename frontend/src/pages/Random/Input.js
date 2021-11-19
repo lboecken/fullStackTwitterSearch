@@ -4,9 +4,12 @@ const axios = require('axios').default;
 function Input(props) {
   const fetchAPI = async (e) => {
     e && e.preventDefault();
-    const query = await axios.get('http://localhost:5000/api/search', {
-      params: { query: e.target.value },
-    });
+    const query = await axios.get(
+      'https://twitter-search-fullstack.herokuapp.com/api/search',
+      {
+        params: { query: e.target.value },
+      }
+    );
     const numOfResults = query.data.length;
     const random_tweet = {
       data: [query.data[Math.floor(Math.random() * numOfResults)]],
