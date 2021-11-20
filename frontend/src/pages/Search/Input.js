@@ -6,13 +6,9 @@ function Input(props) {
   const [searchParams, setSearchParams] = useState();
   const fetchAPI = async (e) => {
     e && e.preventDefault();
-    console.log(process.env);
-    const query = await axios.get(
-      'https://twitter-search-fullstack.herokuapp.com/api/search',
-      {
-        params: { query: searchParams },
-      }
-    );
+    const query = await axios.get('http://localhost:5000/api/search', {
+      params: { query: searchParams },
+    });
     props.setQueryResults(query);
   };
 

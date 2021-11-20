@@ -7,9 +7,8 @@ function Random() {
 
   return (
     <div className='randomTweets'>
-      <h1 className='title'>Random</h1>
       <Input setQueryResults={setQueryResults} />
-      <Results tweets={queryResults} />
+      <Results className='random_tweet' tweets={queryResults} />
     </div>
   );
 }

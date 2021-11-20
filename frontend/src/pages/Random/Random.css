@@ -1,0 +1,20 @@
+:is(.random__dilbert, .random__chess, .random__realClear, .random__duke) img {
+  border-radius: 50%;
+  visibility: visible;
+}
+
+.random__dilbert,
+.random__chess,
+.random__realClear,
+.random__duke {
+  visibility: hidden;
+}
+.random {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.random button img {
+  margin: auto;
+}
