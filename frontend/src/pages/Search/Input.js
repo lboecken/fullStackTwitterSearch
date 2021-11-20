@@ -6,7 +6,7 @@ function Input(props) {
   const [searchParams, setSearchParams] = useState();
   const fetchAPI = async (e) => {
     e && e.preventDefault();
-    const query = await axios.get('http://localhost:5000/api/search', {
+    const query = await axios.get('api/search', {
       params: { query: searchParams },
     });
     props.setQueryResults(query);
