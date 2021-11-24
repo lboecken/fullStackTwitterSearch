@@ -5,6 +5,9 @@ frontend/node_modules
 /.pnp
 .pnp.js
 /venv
+
+#production
+/frontend/build
 # testing
 /coverage
 

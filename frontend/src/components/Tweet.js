@@ -2,31 +2,29 @@ import './Tweet.css';
 
 function Tweet(props) {
   return (
-    <div className='tweet' key={props.key}>
-      <a
-        href={`https://twitter.com/${props.handle}/status/${props.id}`}
-        target='_blank'
-        className='tweet__link'></a>
+    <div className='tweet' key={props.tweet.id}>
       <div className='tweet__userInfo'>
         <img
-          src={props.profile_picture_url}
+          src={props.tweet.user_info.profile_picture_url}
           alt='blank'
           className='tweet__userInfo__profilePicture'></img>
         <div>
-          <h3 className='tweet__userInfo__name'>{props.name}</h3>
+          <h3 className='tweet__userInfo__name'>
+            {props.tweet.user_info.name}
+          </h3>
           <a
             className='tweet__userInfo__handle'
-            href={`https://twitter.com/${props.handle}`}
+            href={`https://twitter.com/${props.tweet.user_info.username}`}
             target='_blank'
             rel='noreferrer'>
-            @{props.handle}
+            @{props.tweet.user_info.username}
           </a>
         </div>
       </div>
-      <p className='tweet__body'> {props.body}</p>
+      <p className='tweet__body'> {props.tweet.text}</p>
       <div className='tweet__media'>
-        {props.media_urls &&
-          props.media_urls.map((url) => {
+        {props.tweet.media_urls &&
+          props.tweet.media_urls.map((url) => {
             return (
               <img className='tweet__media__img' src={url} alt={url}></img>
             );
@@ -34,20 +32,20 @@ function Tweet(props) {
       </div>
       <hr />
       <div className='tweet__info'>
-        <div className='tweet_info__date'>{props.date}</div>
-        <div className='tweet_info__time'>{props.time}</div>
-        <div className='tweet_info__source'>{props.source}</div>
+        <div className='tweet_info__date'>{props.tweet.date}</div>
+        <div className='tweet_info__time'>{props.tweet.time}</div>
+        <div className='tweet_info__source'>{props.tweet.source}</div>
       </div>
       <hr />
       <div className='tweet__metrics'>
         <div className='tweet__metrics__comments'>
-          <strong>{props.comments}</strong> comments
+          <strong>{props.tweet.public_metrics.reply_count}</strong> comments
         </div>
         <div className='tweet__metrics__retweets'>
-          <strong>{props.retweets}</strong> retweets
+          <strong>{props.tweet.public_metrics.retweet_count}</strong> retweets
         </div>
         <div className='tweet__metrics__likes'>
-          <strong>{props.likes}</strong> likes
+          <strong>{props.tweet.public_metrics.like_count}</strong> likes
         </div>
       </div>
     </div>

@@ -3,3 +3,9 @@
   margin: auto;
   overflow: auto;
 }
+
+@media screen and (min-width: 750px) {
+  .results {
+    width: 50%;
+  }
+}

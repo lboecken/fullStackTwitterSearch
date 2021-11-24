@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import './Search.css';
+import { fetchAPI } from '../../helpers.js';
 const axios = require('axios').default;
 
 function Input(props) {
   const [searchParams, setSearchParams] = useState();
-  const fetchAPI = async (e) => {
-    e && e.preventDefault();
-    const query = await axios.get('api/search', {
-      params: { query: searchParams },
-    });
-    props.setQueryResults(query);
-  };
+  async function getTweets(e) {
+    e.preventDefault();
+    props.setQueryResults(await fetchAPI(searchParams));
+  }
 
   return (
-    <form onSubmit={fetchAPI} className='inputForm'>
+    <form onSubmit={(e) => getTweets(e)} className='inputForm'>
       <input
         className='inputForm__input'
         onChange={(e) => {
