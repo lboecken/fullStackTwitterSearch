@@ -31,10 +31,10 @@ function Tweet(props) {
           })}
       </div>
       <hr />
-      <div className='tweet__info'>
-        <div className='tweet_info__date'>{props.tweet.date}</div>
-        <div className='tweet_info__time'>{props.tweet.time}</div>
-        <div className='tweet_info__source'>{props.tweet.source}</div>
+      <div className='tweet__sourceInfo'>
+        <div className='tweet__sourceInfo__date'>{props.tweet.date}</div>
+        <div className='tweet_sourceInfo__time'>{props.tweet.time}</div>
+        <div className='tweet_sourceInfo__source'>{props.tweet.source}</div>
       </div>
       <hr />
       <div className='tweet__metrics'>

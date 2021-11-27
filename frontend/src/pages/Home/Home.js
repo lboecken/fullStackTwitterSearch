@@ -1,19 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Results } from '../../components/components';
+import { fetchAPI } from '../../helpers';
 
 function Home() {
+  const [tweets, setTweets] = useState();
+  const searchParams =
+    'from:adammgrant OR from:shenegotiates OR from:dailymuse OR from:harvardbiz OR from:levoleague OR from:forbes OR from:careerbuilder OR from:lifehacker OR from:learnvest OR from:productivityist OR from:susanmcp1 OR from:tfdiet OR from:creditexperts OR from:npr OR from:ap OR from:theeconomist OR from:nxthompson OR from:emilynussbaum ismashfizzle OR from:lin_manuel OR from:niemanlab OR from:maggienyt OR from:markknoller OR from:pbump';
+  useEffect(async () => {
+    setTweets(await fetchAPI(searchParams));
+  }, []);
   return (
     <div className='home'>
-      <h1>Welcome to Twitter Search Thingy</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae
-        volutpat tortor. Maecenas dignissim fringilla nulla ut faucibus. Fusce
-        eget efficitur sapien, id gravida odio. Aenean tristique eros eu massa
-        venenatis dignissim. Curabitur tempor, enim vel faucibus auctor, lectus
-        est ullamcorper eros, eget porta eros lacus vehicula eros. Quisque augue
-        odio, suscipit sodales porttitor quis, varius vitae massa. Sed rutrum at
-        orci ut maximus. Nunc vel tempus urna.
-      </p>
-      <img src='https://via.placeholder.com/300' alt='Placeholder' />
+      <Results tweets={tweets} />
     </div>
   );
 }
