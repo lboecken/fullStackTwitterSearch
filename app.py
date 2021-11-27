@@ -1,13 +1,14 @@
 from flask import Flask, send_from_directory, request
 from flask_cors import CORS
-from api.search import get_from_twitter
+from api.search.search import get_from_twitter
 
 app = Flask(__name__, static_folder="frontend/build", static_url_path="")
 cors = CORS(app)
 
 
-@app.route("/")
-def serve():
+@app.route("/", defaults={"path": ""})
+@app.route("/<path>")
+def serve(path):
     return send_from_directory(app.static_folder, "index.html")
 
 

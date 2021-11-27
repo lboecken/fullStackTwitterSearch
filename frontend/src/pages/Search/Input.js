@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Search.css';
 import { fetchAPI } from '../../helpers.js';
-const axios = require('axios').default;
 
 function Input(props) {
   const [searchParams, setSearchParams] = useState();

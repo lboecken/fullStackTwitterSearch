@@ -1,7 +1,7 @@
 import datetime
 
 
-def reorganize_response(response):
+def prepare_for_frontend(response):
     response = reorganize_media(response)
     response = reorganize_users(response)
     response = reorganize_datetime(response)
@@ -25,7 +25,7 @@ def reorganize_media(response):
                     url = media_keys_and_urls[key]
                     tweet["media_urls"].append(url)
             except KeyError:
-                print(tweet)
+                print("no media on tweet")
         return response
     except KeyError:
         print("reorganize_media failed with key error")
@@ -47,7 +47,7 @@ def reorganize_users(response):
                 tweet["user_info"] = user_ids_and_info[tweet["author_id"]]
             except KeyError:
                 print(
-                    f"reorganize_users failed @ tweet level of function with key error"
+                    "reorganize_users failed @ tweet level of function with key error"
                 )
     except KeyError:
         print("reorganize_users failed @ top level of function with a key error.")
