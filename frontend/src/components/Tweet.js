@@ -30,7 +30,7 @@ function Tweet(props) {
             );
           })}
       </div>
-      <hr />
+      <hr className='tweet__break__sourceInfo' />
       <div className='tweet__sourceInfo'>
         <div className='tweet__sourceInfo__date'>{props.tweet.date}</div>
         <div className='tweet_sourceInfo__time'>{props.tweet.time}</div>

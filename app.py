@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, request
+from flask import Flask, send_from_directory
 from flask_cors import CORS
 from api.search.search import get_from_twitter
 

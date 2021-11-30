@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Results } from '../../components/components';
+import { Results, Title } from '../../components/components';
 import { fetchAPI } from '../../helpers';
 
 function Home() {
@@ -11,6 +11,7 @@ function Home() {
   }, []);
   return (
     <div className='home'>
+      <Title pageHeading='Home' />
       <Results tweets={tweets} />
     </div>
   );

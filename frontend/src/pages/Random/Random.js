@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Results } from '../../components/components';
+import { Results, Title } from '../../components/components';
 import Input from './Input';
 
 function Random() {
@@ -7,6 +7,7 @@ function Random() {
 
   return (
     <div className='randomTweets'>
+      <Title pageHeading='Random' />
       <Input setQueryResults={setQueryResults} />
       <Results className='random_tweet' tweets={queryResults} />
     </div>

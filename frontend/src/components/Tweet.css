@@ -15,10 +15,11 @@
   color: black;
 }
 
+.tweet__media,
 .tweet__body,
 .tweet__sourceInfo,
 .tweet__metrics {
-  margin-left: 4rem;
+  margin-left: 3.5rem;
 }
 
 .tweet__link {
@@ -34,15 +35,16 @@
 
 .tweet__userInfo__profilePicture {
   border-radius: 50%;
+  border: #e1e8ed 1px solid;
 }
-
+.tweet__break__sourceInfo,
 .tweet__sourceInfo {
-  display: flex;
-  gap: 10px;
+  display: none;
 }
 
 .tweet__metrics {
   display: flex;
+  gap: 2ch;
 }
 
 .tweet__body {
@@ -50,6 +52,11 @@
 }
 
 .tweet__media {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tweet__media__img {
+  width: 25%;
 }
 .tweet__media__img {
   border-radius: 15px;

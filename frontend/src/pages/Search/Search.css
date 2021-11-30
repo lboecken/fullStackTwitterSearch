@@ -1,7 +1,7 @@
-.searchTwitter * {
+/* .searchTwitter * {
   margin: auto;
   box-sizing: border-box;
-}
+} */
 
 /* DROPDOWN */
 .rules * {
@@ -33,6 +33,8 @@
 
 /* INPUT  */
 .inputForm {
+  margin: auto;
+  box-sizing: border-box;
   display: flex;
   width: 80vw;
   justify-content: center;
